@@ -7,6 +7,7 @@ window.FUNNELS.ESTRATEGICO = {
       sections: [
         {
           title: "1. Definición de Buyer Persona.",
+            formUrl: "/forms/investigacion-mercado.html",
           items: [
             "a) Investigación de mercado y datos reales.",
             "b) Identificación de pain points (dolores).",
@@ -131,6 +132,7 @@ window.FUNNELS.ESTRATEGICO = {
     }
   ]
 };
+
 
 
 
