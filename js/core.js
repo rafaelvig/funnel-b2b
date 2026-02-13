@@ -315,8 +315,15 @@ async function loadFunnel(name) {
     await ensureStageLoaded(name);
 
   // Tabs activos
-  document.querySelectorAll(".funnel-tab").forEach(btn => {
-    btn.classList.toggle("active", btn.textContent.trim() === name);
+ const norm = (s) =>
+  (s || "")
+    .trim()
+    .toUpperCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""); // quita tildes
+
+document.querySelectorAll(".funnel-tab").forEach(btn => {
+  btn.classList.toggle("active", norm(btn.textContent) === norm(name))
   });
 
   const funnel = FUNNELS[name];
