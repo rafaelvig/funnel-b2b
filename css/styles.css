@@ -1,0 +1,544 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --primary: #1f2937;
+  --secondary: #374151;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--primary);
+}
+
+/* Header */
+
+.app-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+   padding: 0;
+  margin: 0;
+}
+
+.banner {
+  width: 100%;
+  max-width: none;     /* mismo ancho que el contenido */
+  margin: 0 auto;        /* centra el banner */
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;      /* banner limpio */
+}
+
+.app-logo {
+  height: 40px;
+}
+
+/* Funnel selector */
+
+#funnel-selector {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+}
+
+#funnel-selector button {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#funnel-selector button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Main content */
+
+#content {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Funnel title */
+
+#content h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+/* Blocks (A, B, C...) */
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+/* Block title */
+
+section h2 {
+  margin-top: 0;
+  font-size: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+/* Section titles (1,2,3...) */
+
+section h3 {
+  margin: 20px 0 8px;
+  font-size: 16px;
+  color: var(--secondary);
+}
+
+/* Items list */
+
+section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+section li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--primary);
+  border-bottom: 1px dashed var(--border);
+}
+
+section li:last-child {
+  border-bottom: none;
+}
+.line-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.line-row-header {
+  padding-top: 18px;
+}
+
+.line-text {
+  font-size: 14px;
+  color: var(--primary);
+  line-height: 1.35;
+}
+
+.line-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.btn {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-primary {
+  border-color: var(--accent);
+}
+
+.btn-small {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.btn-danger {
+  border-color: #ef4444;
+}
+
+.btn-danger:hover {
+  color: #ef4444;
+}
+
+.attachments-panel {
+  grid-column: 1 / -1;
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin: 6px 0 2px;
+}
+
+.attachments-empty {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.attachments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attachment-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.attachment-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.attachment-link:hover {
+  text-decoration: underline;
+}
+
+.attachment-actions {
+  display: flex;
+  gap: 8px;
+}
+/* ===============================
+   NIVEL A / B / C / D / E / F
+   =============================== */
+
+section {
+  background: #eef6fb;              /* celeste claro */
+  border: 1px solid #d6e8f5;
+}
+
+section h2 {
+  background: #dbeefb;              /* celeste más marcado */
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin: -20px -24px 16px;          /* “toma” todo el ancho del card */
+}
+/* ===============================
+   NIVEL 1 / 2 / 3 / …
+   =============================== */
+
+.line-row-header {
+  background: #f4f9fd;
+  border: 1px solid #e1eef7;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 14px;
+}
+
+.line-row-header .line-text {
+  font-weight: 600;
+  color: #1f3a5f;
+}
+/* ===============================
+   NIVEL a / b / c
+   =============================== */
+
+.line-row:not(.line-row-header) {
+  padding-left: 12px;
+}
+
+.line-row:not(.line-row-header) .line-text {
+  font-size: 13.5px;
+}
+.funnel-tab.active {
+  background: #dbeefb;
+  border-color: #2563eb;
+  color: #1f3a5f;
+  font-weight: 600;
+}
+.section.collapsed .accordion-body {
+  display: none;
+}
+
+.accordion-header {
+  cursor: pointer;
+  user-select: none;
+}
+.accordion-header .line-text::after {
+  content: " ▸";
+  margin-left: 6px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.section:not(.collapsed) .accordion-header .line-text::after {
+  content: " ▾";
+}
+/* ===============================
+   NIVEL 1 / 2 / 3 – MEJORA VISUAL
+   =============================== */
+
+/* Header 1.,2.,3. cuando está plegado */
+.section.collapsed .line-row-header {
+  background: #f1f8fd;
+  border: 1px solid #dbeaf7;
+}
+
+/* Header 1.,2.,3. cuando está desplegado */
+.section:not(.collapsed) .line-row-header {
+  background: #e3f2fb;
+  border: 1px solid #c7e1f4;
+}
+
+/* Texto del header */
+.line-row-header .line-text {
+  font-weight: 600;
+  color: #1f3a5f;
+}
+
+/* Cuerpo desplegado (a,b,c...) */
+.section:not(.collapsed) .accordion-body {
+  background: #f6fbff;
+  border-left: 3px solid #c7e1f4;
+  padding-left: 8px;
+  margin-top: 6px;
+}
+/* Badge progreso 1/2/3 */
+.progress-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #dbeaf7;
+  background: #ffffff;
+  font-size: 12px;
+  color: #1f3a5f;
+}
+
+/* Punto de estado */
+.progress-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #9ca3af; /* default gris */
+}
+
+.status-empty::before {
+  background: #9ca3af;
+}
+
+.status-progress::before {
+  background: #2563eb; /* celeste/azul */
+}
+
+.status-done::before {
+  background: #16a34a; /* verde */
+}
+/* Tabs más claros y “de navegación principal” */
+#funnel-selector {
+  gap: 10px;
+  padding: 16px 24px;
+}
+
+.funnel-tab {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+.funnel-tab.active {
+  background: #dbeefb;
+  border-color: #2563eb;
+  color: #1f3a5f;
+  font-weight: 700;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+/* Compactación en líneas a/b/c */
+.line-row:not(.line-row-header) {
+  padding: 8px 0;
+}
+
+.line-row:not(.line-row-header) .line-text {
+  font-size: 13.5px;
+}
+
+/* Mantener aire en 1/2/3 */
+.line-row-header {
+  padding: 12px 12px;
+}
+/* Transición de apertura/cierre */
+.accordion-body {
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.section.collapsed .accordion-body {
+  opacity: 0;
+  transform: translateY(-2px);
+}
+
+.section:not(.collapsed) .accordion-body {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Progreso por bloque A/B/C */
+.block-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block-progress {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #dbeaf7;
+  background: #ffffff;
+  color: #1f3a5f;
+}
+
+/* Estados */
+.block-progress.status-empty {
+  opacity: 0.6;
+}
+
+.block-progress.status-progress {
+  border-color: #2563eb;
+}
+
+.block-progress.status-done {
+  border-color: #16a34a;
+  color: #166534;
+}
+/* ===============================
+   NAVEGACIÓN FUNNEL (TOFU / MOFU / BOFU)
+   =============================== */
+
+.funnel-nav {
+  display: inline-flex;
+  gap: 6px;
+  padding: 6px;
+  margin: 16px 0 24px;
+  background: #eaf4fb;
+  border-radius: 14px;
+  border: 1px solid #d6e9f8;
+}
+
+/* Botones base */
+.funnel-tab {
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  color: #1f3a5f;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover */
+.funnel-tab:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+/* Activo */
+.funnel-tab.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.funnel-nav {
+  display: inline-flex;
+  gap: 6px;
+  padding: 6px;
+  margin: 12px 24px 24px;
+  background: #eaf4fb;
+  border: 1px solid #d6e9f8;
+  border-radius: 14px;
+}
+
+.funnel-nav .funnel-tab {
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  background: transparent;
+  border: 0;
+  color: #1f3a5f;
+  cursor: pointer;
+}
+
+.funnel-nav .funnel-tab.active {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+/* Footer sutil */
+.app-footer {
+  margin-top: 48px;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+}
+/* Links de adjuntos: claramente clickeables */
+.attachment-link {
+  color: #1f3a5f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+/* Botón Abrir como acción primaria secundaria (sin competir con Agregar archivo) */
+.btn-open {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #ffffff;
+}
+
+.btn-open:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+.auth-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 24px;
+}
+
+.auth-bar input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #d6e9f8;
+}

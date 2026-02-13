@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Funnel B2B</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="banner">
+    <img src="img/banner.png" alt="Funnel B2B" />
+  </div>
+
+  <!-- ÚNICA barra de navegación -->
+  <div class="funnel-nav">
+      <button class="funnel-tab" onclick="loadFunnel('ESTRATEGICO')">ESTRATÉGICO</button>
+    <button class="funnel-tab" onclick="loadFunnel('TOFU')">TOFU</button>
+    <button class="funnel-tab" onclick="loadFunnel('MOFU')">MOFU</button>
+    <button class="funnel-tab" onclick="loadFunnel('BOFU')">BOFU</button>
+  </div>
+</header>
+<div id="auth" class="auth-bar"></div>
+<div id="content"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  window.SUPABASE_URL = "https://vjwxkruczzjnkzfjgrba.supabase.co";
+  window.SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqd3hrcnVjenpqbmt6ZmpncmJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxMzQ4MzUsImV4cCI6MjA4NTcxMDgzNX0.8y621Ls7hTiva2zihhOXqlAiIo7omcd73-RWO73FYAs";
+</script>
+
+<script defer src="js/core.js"></script>
+<script defer src="js/tofu.js"></script>
+<script defer src="js/estrategico.js"></script>
+
+
+<script>
+  window.addEventListener("DOMContentLoaded", async () => {
+    await window.renderAuthBar?.();
+    await window.ensureStoreLoaded?.();
+    window.loadFunnel?.("ESTRATEGICO");
+  });
+</script>
+
+
+<footer class="app-footer">
+  © 2026 Rafael Viglierchio. Uso interno.
+</footer>
+
+
+</body>
+</html>
