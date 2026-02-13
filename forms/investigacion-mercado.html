@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulario | Investigación de mercado</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;background:#f5f7fb;color:#0b1b2b}
+    .wrap{max-width:980px;margin:24px auto;padding:0 16px}
+    .card{background:#fff;border:1px solid #e6eef8;border-radius:14px;padding:18px 18px 8px 18px;box-shadow:0 6px 20px rgba(10,35,70,.06)}
+    h1{margin:0 0 6px 0;font-size:22px}
+    .sub{margin:0 0 16px 0;color:#4a5b72;font-size:13px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-size:12px;color:#4a5b72;margin:10px 0 6px}
+    input, textarea, select{width:100%;box-sizing:border-box;border:1px solid #d8e6f7;border-radius:10px;padding:10px 10px;font-size:14px;background:#fff}
+    textarea{min-height:90px;resize:vertical}
+    .q{margin:14px 0 0 0;padding:12px;border:1px solid #eef4ff;border-radius:12px;background:#fbfdff}
+    .q h3{margin:0 0 8px 0;font-size:14px}
+    .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .btn{border:1px solid #2e6cf6;background:#2e6cf6;color:#fff;border-radius:10px;padding:10px 14px;font-weight:600;cursor:pointer}
+    .btn2{border:1px solid #d8e6f7;background:#fff;color:#0b1b2b;border-radius:10px;padding:10px 14px;font-weight:600;cursor:pointer}
+    .msg{margin:10px 0 14px 0;font-size:13px;color:#4a5b72}
+    .ok{color:#0c7a3e}
+    .err{color:#b42318}
+    @media (max-width:800px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Investigación de mercado</h1>
+      <p class="sub">Completar para diagnosticar mercado, competencia, logística, propuesta financiera, digital y oportunidades. Guarda en Supabase.</p>
+
+      <div class="grid">
+        <div>
+          <label>Proyecto / Cliente (nombre interno)</label>
+          <input id="project_name" placeholder="Ej: Droguería Monumento - Farmacias" />
+        </div>
+        <div>
+          <label>Nombre de quien responde</label>
+          <input id="client_name" placeholder="Nombre y apellido" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input id="client_email" type="email" placeholder="mail@empresa.com" />
+        </div>
+        <div>
+          <label>Tipo de farmacia objetivo principal</label>
+          <select id="target_type">
+            <option value="">Seleccionar</option>
+            <option>Independientes urbanas</option>
+            <option>Cadenas / regionales</option>
+            <option>Farmacias de convenios (PAMI/OS/prepagas)</option>
+            <option>Mixto</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="q">
+        <h3>1) Segmentos objetivo</h3>
+        <textarea id="q1" placeholder="Qué segmentos priorizamos y por qué. Criterios: geografía, tamaño, mix Rx/OTC, madurez digital, frecuencia."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>2) Demanda y mix</h3>
+        <textarea id="q2" placeholder="Cómo describís la demanda: volumen, mix OTC vs Rx, importados/alto precio, y qué tendencia observás (2024–2026)."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>3) Principales dolores de la farmacia</h3>
+        <textarea id="q3" placeholder="Top 5 pain points: quiebres, devoluciones, cortes, reclamos, precios, crédito, notas de crédito, plazos, etc."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>4) Nivel de servicio requerido</h3>
+        <textarea id="q4" placeholder="Qué SLA espera la farmacia por segmento. Fill rate, OTIF, cut-off, devoluciones, reclamos."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>5) Logística y capilaridad</h3>
+        <textarea id="q5" placeholder="Mapa de cobertura: AMBA, grandes plazas, interior. Restricciones: costo, frecuencia, cross-dock, tiempos."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>6) Competidores relevantes (top 5 en tu zona)</h3>
+        <textarea id="q6" placeholder="Quiénes son, cómo compiten (servicio/crédito/digital/acuerdos), fortalezas difíciles de copiar."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>7) Diferenciación (no precio)</h3>
+        <textarea id="q7" placeholder="Qué ventajas sostenibles podemos construir: servicio, digital, propuesta financiera, surtido/acuerdos, programas medibles."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>8) Propuesta financiera y riesgo</h3>
+        <textarea id="q8" placeholder="Condiciones típicas del mercado: plazos, cobranza, incobrables. Qué política queremos (scoring, límites, alertas)."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>9) Digitalización del pedido y lock-in operacional</h3>
+        <textarea id="q9" placeholder="Qué herramientas usa hoy la farmacia (pedido, reposición, analítica). Qué integraciones o funcionalidades generan dependencia positiva."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>10) Portafolio y surtido</h3>
+        <textarea id="q10" placeholder="Qué categorías son críticas (OTC/perfumería vs Rx alto precio). Acuerdos con laboratorios: disponibilidad y data."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>11) Barreras de entrada y condiciones mínimas</h3>
+        <textarea id="q11" placeholder="Qué barreras importan de verdad en tu zona: CD/ruteo, capital de trabajo, sistemas, compliance, acuerdos."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>12) Métricas operativas objetivo</h3>
+        <textarea id="q12" placeholder="Objetivos sugeridos: fill rate, OTIF, mora, rotación, costo logístico/venta. Poner umbrales."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>13) Riesgos críticos (macro, convenios, regulatorio, venta directa)</h3>
+        <textarea id="q13" placeholder="Qué puede romper el modelo: descalces, cambios PAMI/OS, recorte condiciones, sustitutos, reputación/regulatorio."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>14) Oportunidades con mejor “alpha”</h3>
+        <textarea id="q14" placeholder="Dónde hay ventaja real: scoring, category management OTC, recomendador reposición, expansión selectiva, devoluciones."></textarea>
+      </div>
+
+      <div class="q">
+        <h3>15) Recomendaciones priorizadas (impacto vs dificultad)</h3>
+        <textarea id="q15" placeholder="Elegí 5 iniciativas y justificá impacto/dificultad. Qué atacar primero y por qué."></textarea>
+      </div>
+
+      <div class="row" style="margin-top:14px">
+        <button class="btn" id="saveBtn">Guardar en Supabase</button>
+        <button class="btn2" id="backBtn" type="button">Volver al Funnel</button>
+      </div>
+
+      <div class="msg" id="msg"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const SUPABASE_URL = "https://vjwxkruczzjnkzfjgrba.supabase.co";
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZqd3hrcnVjenpqbmt6ZmpncmJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxMzQ4MzUsImV4cCI6MjA4NTcxMDgzNX0.8y621Ls7hTiva2zihhOXqlAiIo7omcd73-RWO73FYAs";
+    const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const $ = (id) => document.getElementById(id);
+    const msg = (text, cls) => { $("msg").className = "msg " + (cls || ""); $("msg").textContent = text || ""; };
+
+    $("backBtn").onclick = () => {
+      window.location.href = "/";
+    };
+
+    $("saveBtn").onclick = async () => {
+      msg("Guardando...", "");
+      const { data: sess } = await sb.auth.getSession();
+      if (!sess?.session) {
+        msg("Necesitás iniciar sesión en el Funnel para guardar este formulario.", "err");
+        return;
+      }
+
+      const payload = {
+        created_by: sess.session.user.id,
+        project_name: $("project_name").value || null,
+        client_name: $("client_name").value || null,
+        client_email: $("client_email").value || null,
+        answers: {
+          target_type: $("target_type").value || null,
+          q1: $("q1").value || null,
+          q2: $("q2").value || null,
+          q3: $("q3").value || null,
+          q4: $("q4").value || null,
+          q5: $("q5").value || null,
+          q6: $("q6").value || null,
+          q7: $("q7").value || null,
+          q8: $("q8").value || null,
+          q9: $("q9").value || null,
+          q10: $("q10").value || null,
+          q11: $("q11").value || null,
+          q12: $("q12").value || null,
+          q13: $("q13").value || null,
+          q14: $("q14").value || null,
+          q15: $("q15").value || null
+        }
+      };
+
+      const { error } = await sb.from("market_research_forms").insert([payload]);
+      if (error) {
+        msg(error.message || "Error guardando.", "err");
+        return;
+      }
+      msg("Guardado OK.", "ok");
+    };
+  </script>
+</body>
+</html>
