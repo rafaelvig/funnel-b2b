@@ -373,6 +373,19 @@ document.querySelectorAll(".funnel-tab").forEach(btn => {
         { isHeaderLine: true, progress: prog }
       );
       sectionLine.classList.add("accordion-header");
+  if (section.formUrl) {
+    const right = sectionLine.querySelector(".line-actions");
+    if (right) {
+      const btnForm = makeBtn("Abrir formulario", () => {
+        window.open(section.formUrl, "_blank", "noopener,noreferrer");
+      }, "btn btn-primary");
+
+      right.insertBefore(btnForm, right.firstChild);
+    }
+  }
+
+
+       
 
       // Body (plegable)
       const accordionBody = el("div", "accordion-body");
@@ -385,6 +398,17 @@ document.querySelectorAll(".funnel-tab").forEach(btn => {
         );
         ul.appendChild(li);
       });
+       // Botón formulario en el header (si existe formUrl)
+if (section.formUrl) {
+  const right = sectionLine.querySelector(".line-actions");
+  const btnForm = makeBtn("Abrir formulario", () => {
+    window.open(section.formUrl, "_blank", "noopener,noreferrer");
+  }, "btn btn-primary");
+
+  // lo ponemos primero para que se vea antes que "Agregar archivo"
+  right.insertBefore(btnForm, right.firstChild);
+}
+
 
       accordionBody.appendChild(ul);
 
