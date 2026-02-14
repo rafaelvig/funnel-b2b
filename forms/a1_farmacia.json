@@ -1,0 +1,356 @@
+{
+  "form_id": "diagnostico_estrategico_farmacia",
+  "section_id": "A1_farmacia",
+  "title": "Diagnóstico estratégico - Sección A1 (Farmacia)",
+  "questions": [
+    {
+      "id": "ci1_relacion_drogueria",
+      "group": "contexto",
+      "label": "¿Qué relación tiene hoy su farmacia con Droguería Monumento?",
+      "type": "single_choice",
+      "options": [
+        { "value": "actual_cliente", "label": "Compro actualmente a Droguería Monumento" },
+        { "value": "ex_cliente", "label": "Compré antes, pero ahora no compro" },
+        { "value": "conozco_no_compro", "label": "Conozco la droguería, pero nunca compré" },
+        { "value": "no_conocia", "label": "No conocía Droguería Monumento hasta hoy" }
+      ]
+    },
+    {
+      "id": "ci2_rol_respondente",
+      "group": "contexto",
+      "label": "¿Cuál es su rol principal en la farmacia?",
+      "type": "single_choice",
+      "options": [
+        { "value": "propietario_socio", "label": "Propietario/a o socio/a" },
+        { "value": "gerente_administrador", "label": "Gerente / administrador general" },
+        { "value": "encargado_compras", "label": "Encargado/a de compras" },
+        { "value": "administrativo_contable", "label": "Personal administrativo / contable" },
+        { "value": "mostrador_dispensacion", "label": "Personal de mostrador / dispensación" },
+        { "value": "otro_rol", "label": "Otro rol" }
+      ]
+    },
+
+    /* ---------- A1.a) DATOS REALES DEL NEGOCIO ---------- */
+
+    {
+      "id": "p1_tipo_farmacia",
+      "group": "datos_negocio",
+      "label": "¿Qué tipo de estructura tiene su farmacia o empresa?",
+      "type": "single_choice",
+      "options": [
+        { "value": "independiente", "label": "Farmacia independiente (1 solo local)" },
+        { "value": "mini_cadena", "label": "Mini cadena (2–5 locales)" },
+        { "value": "cadena_mediana", "label": "Cadena mediana (6–20 locales)" },
+        { "value": "gran_cadena", "label": "Gran cadena (más de 20 locales)" }
+      ]
+    },
+    {
+      "id": "p2_cantidad_locales",
+      "group": "datos_negocio",
+      "label": "¿Cuántos locales de farmacia tiene su empresa actualmente?",
+      "type": "single_choice",
+      "options": [
+        { "value": "1", "label": "1 local" },
+        { "value": "2_3", "label": "2–3 locales" },
+        { "value": "4_10", "label": "4–10 locales" },
+        { "value": "mas_10", "label": "Más de 10 locales" }
+      ]
+    },
+    {
+      "id": "p3_antiguedad",
+      "group": "datos_negocio",
+      "label": "¿Hace cuánto tiempo funciona esta farmacia (o la cadena)?",
+      "type": "single_choice",
+      "options": [
+        { "value": "menos_1", "label": "Menos de 1 año" },
+        { "value": "1_3", "label": "De 1 a 3 años" },
+        { "value": "4_10", "label": "De 4 a 10 años" },
+        { "value": "11_20", "label": "De 11 a 20 años" },
+        { "value": "mas_20", "label": "Más de 20 años" }
+      ]
+    },
+    {
+      "id": "p4_tipo_zona",
+      "group": "datos_negocio",
+      "label": "¿En qué tipo de zona se encuentra principalmente esta farmacia?",
+      "type": "single_choice",
+      "options": [
+        { "value": "centro_ciudad_grande", "label": "Centro comercial de ciudad grande" },
+        { "value": "barrio_residencial", "label": "Barrio residencial de ciudad grande" },
+        { "value": "ciudad_pueblo_pequeno", "label": "Ciudad o pueblo pequeño" },
+        { "value": "zona_periurbana_ruta", "label": "Zona periurbana / cercanías de ruta" },
+        { "value": "otra", "label": "Otra ubicación" }
+      ]
+    },
+    {
+      "id": "p5_cantidad_personas",
+      "group": "datos_negocio",
+      "label": "Incluyendo propietarios, ¿cuántas personas trabajan habitualmente en esta farmacia?",
+      "type": "single_choice",
+      "options": [
+        { "value": "hasta_3", "label": "Hasta 3 personas" },
+        { "value": "4_7", "label": "De 4 a 7 personas" },
+        { "value": "8_15", "label": "De 8 a 15 personas" },
+        { "value": "mas_15", "label": "Más de 15 personas" }
+      ]
+    },
+    {
+      "id": "p6_cantidad_droguerias",
+      "group": "datos_negocio",
+      "label": "En un mes típico, ¿con cuántas droguerías compra habitualmente?",
+      "type": "single_choice",
+      "options": [
+        { "value": "1", "label": "Solo 1 droguería" },
+        { "value": "2", "label": "2 droguerías" },
+        { "value": "3_4", "label": "3–4 droguerías" },
+        { "value": "5_mas", "label": "5 o más droguerías" }
+      ]
+    },
+    {
+      "id": "p7_porcentaje_droguerias",
+      "group": "datos_negocio",
+      "label": "Pensando en todas sus compras de medicamentos y productos de salud, ¿qué porcentaje aproximado compra a droguerías (y no directo a laboratorios)?",
+      "type": "single_choice",
+      "options": [
+        { "value": "menos_25", "label": "Menos del 25%" },
+        { "value": "25_49", "label": "Entre 25% y 49%" },
+        { "value": "50_74", "label": "Entre 50% y 74%" },
+        { "value": "75_90", "label": "Entre 75% y 90%" },
+        { "value": "mas_90", "label": "Más del 90%" }
+      ]
+    },
+
+    /* ---------- A1.b) DOLORES ---------- */
+
+    {
+      "id": "p8_dolor_logistico",
+      "group": "dolores",
+      "label": "Pensando en sus droguerías, ¿cuál de estos problemas logísticos siente con más frecuencia?",
+      "type": "single_choice",
+      "options": [
+        { "value": "faltantes", "label": "Faltantes de productos que necesito" },
+        { "value": "demoras_entrega", "label": "Demoras en la entrega" },
+        { "value": "entregas_incompletas_errores", "label": "Entregas incompletas o con errores" },
+        { "value": "horarios_inconvenientes", "label": "Horarios de entrega que no se adaptan a la farmacia" },
+        { "value": "sin_problemas_logisticos", "label": "No tengo problemas logísticos importantes" }
+      ]
+    },
+    {
+      "id": "p9_dolor_administrativo",
+      "group": "dolores",
+      "label": "En la parte administrativa, ¿qué inconveniente aparece más seguido con sus droguerías?",
+      "type": "single_choice",
+      "options": [
+        { "value": "facturas_error", "label": "Facturas con errores" },
+        { "value": "notas_credito_lentas", "label": "Notas de crédito o devoluciones que demoran" },
+        { "value": "dificultad_conciliar_cuenta", "label": "Dificultad para entender o conciliar la cuenta corriente" },
+        { "value": "confusion_promos_bonos", "label": "Confusión con promociones, bonificaciones y descuentos" },
+        { "value": "sin_problemas_admin", "label": "No tengo problemas administrativos importantes" }
+      ]
+    },
+    {
+      "id": "p10_frecuencia_problemas",
+      "group": "dolores",
+      "label": "Sumando problemas logísticos y administrativos, ¿con qué frecuencia tiene algún problema con alguna droguería?",
+      "type": "single_choice",
+      "options": [
+        { "value": "casi_diario", "label": "Casi todos los días" },
+        { "value": "varias_veces_semana", "label": "Varias veces por semana" },
+        { "value": "varias_veces_mes", "label": "Varias veces por mes" },
+        { "value": "pocas_veces_anio", "label": "Pocas veces al año" },
+        { "value": "casi_nunca", "label": "Casi nunca" }
+      ]
+    },
+    {
+      "id": "p11_impacto_negocio",
+      "group": "dolores",
+      "label": "¿Qué tanto siente que estos problemas afectan el resultado económico de la farmacia?",
+      "type": "single_choice",
+      "options": [
+        { "value": "muchisimo", "label": "Muchísimo, me generan pérdidas importantes" },
+        { "value": "bastante", "label": "Bastante, me complican la rentabilidad" },
+        { "value": "algo", "label": "Algo, pero lo puedo manejar" },
+        { "value": "poco", "label": "Poco, casi no afectan" },
+        { "value": "nada", "label": "Nada, no lo veo como un problema económico" }
+      ]
+    },
+
+    /* ---------- A1.c) ROLES DE DECISIÓN ---------- */
+
+    {
+      "id": "p12_decisor_principal",
+      "group": "roles_decision",
+      "label": "En su farmacia, ¿quién es la persona principal que decide con qué droguerías trabajar?",
+      "type": "single_choice",
+      "options": [
+        { "value": "propietario_socio", "label": "Propietario/a o socio/a" },
+        { "value": "gerente_administrador", "label": "Gerente / administrador general" },
+        { "value": "encargado_compras", "label": "Encargado/a de compras" },
+        { "value": "otra_persona", "label": "Otra persona" },
+        { "value": "decision_compartida", "label": "Se decide entre varias personas en conjunto" }
+      ]
+    },
+    {
+      "id": "p13_usuario_operativo",
+      "group": "roles_decision",
+      "label": "¿Quién usa más seguido los canales de pedido a las droguerías (teléfono, WhatsApp, portal, etc.)?",
+      "type": "single_choice",
+      "options": [
+        { "value": "propietario_socio", "label": "Propietario/a o socio/a" },
+        { "value": "encargado_compras", "label": "Encargado/a de compras" },
+        { "value": "mostrador_dispensacion", "label": "Personal de mostrador / dispensación" },
+        { "value": "administrativo", "label": "Personal administrativo" },
+        { "value": "repartido_varios", "label": "Repartido entre varias personas" }
+      ]
+    },
+    {
+      "id": "p14_personas_en_decision",
+      "group": "roles_decision",
+      "label": "Cuando evalúan empezar a trabajar con una nueva droguería, ¿cuántas personas participan activamente en esa decisión?",
+      "type": "single_choice",
+      "options": [
+        { "value": "1", "label": "1 persona" },
+        { "value": "2", "label": "2 personas" },
+        { "value": "3", "label": "3 personas" },
+        { "value": "4_mas", "label": "4 o más personas" }
+      ]
+    },
+
+    /* ---------- A1.d) MOTIVACIONES Y OBJECIONES ---------- */
+
+    {
+      "id": "p15_motivo_nueva_drogueria",
+      "group": "motivaciones",
+      "label": "¿Cuál sería el motivo principal por el que su farmacia consideraría probar una nueva droguería?",
+      "type": "single_choice",
+      "options": [
+        { "value": "mejor_precio_descuentos", "label": "Mejores precios y descuentos" },
+        { "value": "mejor_logistica", "label": "Más rapidez y cumplimiento en las entregas" },
+        { "value": "mejor_credito", "label": "Mejores condiciones de crédito / financiación" },
+        { "value": "mayor_variedad", "label": "Mayor variedad de productos o líneas" },
+        { "value": "recomendacion_colegas", "label": "Recomendación de colegas u otros profesionales" }
+      ]
+    },
+    {
+      "id": "p16_factor_mas_peso",
+      "group": "motivaciones",
+      "label": "Al elegir con qué droguería trabajar más, ¿qué factor pesa MÁS en su decisión?",
+      "type": "single_choice",
+      "options": [
+        { "value": "precio_descuentos", "label": "Precio y descuentos" },
+        { "value": "rapidez_confiabilidad", "label": "Rapidez y confiabilidad en la entrega" },
+        { "value": "atencion_solucion_problemas", "label": "Calidad de la atención y solución de problemas" },
+        { "value": "facilidad_administrativa", "label": "Facilidad administrativa (facturación, cuenta corriente, notas de crédito)" },
+        { "value": "relacion_confianza", "label": "Relación de confianza con el vendedor / ejecutivo" }
+      ]
+    },
+    {
+      "id": "p17_razon_no_cambiar",
+      "group": "motivaciones",
+      "label": "¿Cuál es la principal razón por la que NO cambiaría de su droguería principal actual, aunque aparezca una nueva oferta?",
+      "type": "single_choice",
+      "options": [
+        { "value": "miedo_perder_condiciones", "label": "Miedo a perder las buenas condiciones comerciales actuales" },
+        { "value": "desconfianza_entrega_nueva", "label": "Desconfianza en que otra droguería cumpla igual en la entrega" },
+        { "value": "falta_tiempo_probar", "label": "Falta de tiempo para probar y comparar otra opción" },
+        { "value": "relacion_personal_larga", "label": "Relación personal de muchos años con el proveedor actual" },
+        { "value": "muy_conforme", "label": "Porque estoy muy conforme y no veo necesidad de cambio" }
+      ]
+    },
+    {
+      "id": "p18_disposicion_cambiar",
+      "group": "motivaciones",
+      "label": "Pensando en los próximos 12 meses, si una nueva droguería cumple lo que promete, ¿qué tan dispuesto está a pasarle una parte importante de sus compras?",
+      "type": "single_choice",
+      "options": [
+        { "value": "nada_dispuesto", "label": "Nada dispuesto" },
+        { "value": "poco_dispuesto", "label": "Poco dispuesto" },
+        { "value": "algo_dispuesto", "label": "Algo dispuesto" },
+        { "value": "muy_dispuesto", "label": "Muy dispuesto" },
+        { "value": "totalmente_dispuesto", "label": "Totalmente dispuesto" }
+      ]
+    },
+
+    /* ---------- A1.e) COMPORTAMIENTO DIGITAL ---------- */
+
+    {
+      "id": "p19_canales_uso_actual",
+      "group": "comportamiento_digital",
+      "label": "¿Qué canales utiliza hoy para hacer pedidos o consultas a sus droguerías? (Puede tildar más de uno)",
+      "type": "multi_choice",
+      "options": [
+        { "value": "telefono_fijo", "label": "Teléfono fijo" },
+        { "value": "llamadas_celular", "label": "Llamadas a celular" },
+        { "value": "whatsapp", "label": "WhatsApp (texto o audio)" },
+        { "value": "correo_electronico", "label": "Correo electrónico" },
+        { "value": "portal_web", "label": "Plataforma web / portal de pedidos" },
+        { "value": "visitas_vendedor", "label": "Visitas presenciales del vendedor" }
+      ]
+    },
+    {
+      "id": "p20_canal_principal_pedidos",
+      "group": "comportamiento_digital",
+      "label": "De los canales anteriores, ¿cuál usa con mayor frecuencia para hacer sus pedidos principales a las droguerías?",
+      "type": "single_choice",
+      "options": [
+        { "value": "telefono_fijo", "label": "Teléfono fijo" },
+        { "value": "llamadas_celular", "label": "Llamadas a celular" },
+        { "value": "whatsapp", "label": "WhatsApp" },
+        { "value": "correo_electronico", "label": "Correo electrónico" },
+        { "value": "portal_web", "label": "Plataforma web / portal de pedidos" }
+      ]
+    },
+    {
+      "id": "p21_canal_preferido_promos",
+      "group": "comportamiento_digital",
+      "label": "¿Cómo prefiere recibir ofertas, novedades y promociones de una droguería?",
+      "type": "single_choice",
+      "options": [
+        { "value": "whatsapp", "label": "Mensajes de WhatsApp" },
+        { "value": "email", "label": "Email con información y catálogos" },
+        { "value": "llamadas_vendedor", "label": "Llamadas del vendedor" },
+        { "value": "visitas_vendedor", "label": "Visitas presenciales del vendedor" },
+        { "value": "portal_web", "label": "Verlas en un portal web cuando yo quiera" }
+      ]
+    },
+    {
+      "id": "p22_herramientas_gestion",
+      "group": "comportamiento_digital",
+      "label": "¿Qué herramientas utiliza para controlar el stock y las compras en la farmacia? (Puede tildar más de una)",
+      "type": "multi_choice",
+      "options": [
+        { "value": "software_farmacia", "label": "Software específico de gestión de farmacia" },
+        { "value": "erp_otros", "label": "Otro sistema de gestión / ERP" },
+        { "value": "excel", "label": "Planillas Excel u hojas de cálculo" },
+        { "value": "registro_manual", "label": "Registro manual (papel / cuaderno)" },
+        { "value": "otra_herramienta_digital", "label": "Otra herramienta digital" }
+      ]
+    },
+    {
+      "id": "p23_uso_canales_digitales",
+      "group": "comportamiento_digital",
+      "label": "En general, ¿qué tanto usa canales digitales (WhatsApp, email, web) en lugar de llamadas o visitas para tratar con proveedores?",
+      "type": "single_choice",
+      "options": [
+        { "value": "casi_nunca", "label": "Casi nunca uso canales digitales" },
+        { "value": "algunas_veces", "label": "Los uso algunas veces" },
+        { "value": "mitad_veces", "label": "Los uso aproximadamente la mitad de las veces" },
+        { "value": "mayoria_veces", "label": "Los uso la mayoría de las veces" },
+        { "value": "casi_siempre", "label": "Casi siempre / siempre uso canales digitales" }
+      ]
+    },
+    {
+      "id": "p24_investigacion_previa",
+      "group": "comportamiento_digital",
+      "label": "Antes de empezar a trabajar con una nueva droguería, ¿cuánta información suele buscar por su cuenta?",
+      "type": "single_choice",
+      "options": [
+        { "value": "no_busco", "label": "No busco información, solo escucho lo que me dice el vendedor" },
+        { "value": "muy_poca", "label": "Busco muy poca información adicional" },
+        { "value": "algo", "label": "Busco algo (referencias básicas, comentarios de colegas)" },
+        { "value": "bastante", "label": "Busco bastante (web, redes, recomendaciones, comparaciones)" },
+        { "value": "en_profundidad", "label": "Investigo en profundidad antes de decidir" }
+      ]
+    }
+  ]
+}
