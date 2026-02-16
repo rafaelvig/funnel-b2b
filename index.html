@@ -40,6 +40,55 @@
     window.loadFunnel?.("ESTRATEGICO");
   });
 </script>
+  <!-- P19 -->
+<fieldset>
+  <legend>P19. ¿Qué canales utiliza hoy?</legend>
+
+  <label><input type="checkbox" name="P19[]" value="telefono"> Teléfono</label><br>
+  <label><input type="checkbox" name="P19[]" value="whatsapp"> WhatsApp</label><br>
+  <label><input type="checkbox" name="P19[]" value="email"> Email</label><br>
+  <label><input type="checkbox" name="P19[]" value="web"> Portal web</label>
+</fieldset>
+
+<!-- P20 -->
+<fieldset id="bloqueP20" style="display:none">
+  <legend>P20. ¿Cuál usa más?</legend>
+  <div id="opcionesP20"></div>
+</fieldset>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[name="P19[]"]');
+  const bloqueP20 = document.getElementById("bloqueP20");
+  const opcionesP20 = document.getElementById("opcionesP20");
+
+  function actualizarP20() {
+
+    const seleccionados = [...checkboxes].filter(c => c.checked);
+
+    opcionesP20.innerHTML = "";
+
+    if (seleccionados.length === 0) {
+      bloqueP20.style.display = "none";
+      return;
+    }
+
+    bloqueP20.style.display = "";
+
+    seleccionados.forEach(c => {
+      const texto = c.parentElement.textContent.trim();
+
+      opcionesP20.insertAdjacentHTML("beforeend",
+        `<label>
+           <input type="radio" name="P20" value="${c.value}">
+           ${texto}
+         </label><br>`
+      );
+    });
+  }
+
+  checkboxes.forEach(c => c.addEventListener("change", actualizarP20));
+</script>
+
 
 
 <footer class="app-footer">
@@ -49,3 +98,4 @@
 
 </body>
 </html>
+
